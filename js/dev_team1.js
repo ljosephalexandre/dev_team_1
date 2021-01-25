@@ -6,35 +6,27 @@ $('#btn_add').click(function () {
     let produit = $('#produit').val();
 
     // Nombre d'item de notre liste
-    let nbrItem = $('#nbrItem').val();
-    let nbrItemSuiv = nbrItem +1;
+    let nbrItem = $('#nbrItem').val(); 
 
-    console.log('produit : '+produit);
-    console.log('nbrItem : '+nbrItem);
+    if(nbrItem == ""){
+        nbrItem = 0;
+    }else{
+        nbrItem = $('#nbrItem').val();
+    }
+    
+    // let nbrItemSuiv = nbrItem +1;
 
     if ($('#produit').attr("value") != "") {
         liste[nbrItem] = produit; 
-        nbrItem = liste.length;
-        console.log(liste);
-        console.log('nbrItem : '+nbrItem);
-       
+        $('#nbrItem').val(liste.length); 
+        console.log('taille tableau liste : '+liste.length);
+        $('#sortable').append('<li class="itemListe">'+liste[nbrItem]+'</li>');
+        $('#produit').val('');
     }
+    console.log('produit : '+produit);
+    console.log('nbrItem : '+$('#nbrItem').val());
+    console.log('tableau : '+liste);
 })
-
-console.log(liste);
-for (i =0; i < liste.length; i++){
-    $('#sortable').append('<li class="itemListe">'+liste[i]+'</li>');
-    
-}
-
-
-
-// $('#btn_basket').click(function(){
-//     let legume = localStorage.getItem('legume');
-//     let viandes = localStorage.getItem('viande');
-//     $('#basket').append('<br>'+legume+'<br>'+viandes);
-  
-//   })
 
 $(function () {
     $("#sortable").sortable();
