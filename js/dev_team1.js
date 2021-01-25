@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 var liste = new Array();
 
 $('#btn_add').click(function () {
@@ -38,7 +36,6 @@ for (i =0; i < liste.length; i++){
   
 //   })
 
->>>>>>> b3d72df... ajout dynamique d'élément dans une liste sortable
 $(function () {
     $("#sortable").sortable();
     $("#sortable").disableSelection();
