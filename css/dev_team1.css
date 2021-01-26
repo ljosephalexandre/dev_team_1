@@ -1,10 +1,23 @@
+
 *{
 	box-sizing: border-box;
 }
-
-.itemListe{
+ 
+.item-liste{
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
 	list-style: none;
 	border: 1px solid black;
-	width: 100px;
-	background-color: lightgray;
+	width: 500px;
+}
+
+
+.item-add{
+	display: flex;
+	justify-content: left;
+	align-items: flex-start;
+	list-style: none;
+	border: 1px solid black;
+	width: 500px;
 }
